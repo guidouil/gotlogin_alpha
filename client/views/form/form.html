@@ -1,0 +1,100 @@
+<template name="appForm">
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="inputUrl">Url</label>
+    <div class="col-md-6">
+      <input type="url" class="form-control" id="inputUrl" placeholder="Website url address or form action" value="{{url}}" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="inputName">Name</label>
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="inputName" placeholder="Website name" value="{{name}}" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="radiosStyle">Style</label>
+    <div class="col-md-6 btn-group" data-toggle="buttons">
+      <label class="btn btn-default {{defaultStyleActive}}" for="style-0" id="defaultStyleLabel">
+        <input type="radio" name="radiosStyle" id="style-0" value="btn-default" {{defaultStyleChecked}}>
+        Default
+      </label>
+      <label class="btn btn-primary {{primaryStyleActive}}" for="style-1">
+        <input type="radio" name="radiosStyle" id="style-1" value="btn-primary" {{primaryStyleChecked}}>
+        Primary
+      </label>
+      <label class="btn btn-info {{infoStyleActive}}" for="style-2">
+        <input type="radio" name="radiosStyle" id="style-2" value="btn-info" {{infoStyleChecked}}>
+        Info
+      </label>
+      <label class="btn btn-success {{successStyleActive}}" for="style-3">
+        <input type="radio" name="radiosStyle" id="style-3" value="btn-success" {{successStyleChecked}}>
+        Success
+      </label>
+      <label class="btn btn-warning {{warningStyleActive}}" for="style-4">
+        <input type="radio" name="radiosStyle" id="style-4" value="btn-warning" {{warningStyleChecked}}>
+        Warning
+      </label>
+      <label class="btn btn-danger {{dangerStyleActive}}" for="style-5">
+        <input type="radio" name="radiosStyle" id="style-5" value="btn-danger" {{dangerStyleChecked}}>
+        Danger
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="radiosShared">Shared</label>
+    <div class="col-md-6 btn-group" data-toggle="buttons">
+      <label class="btn btn-success {{isSharedActive}}" for="shared-0" id="isSharedLabel">
+        <input type="radio" name="radiosShared" id="shared-0" value="1" {{isSharedChecked}}>
+        YES
+      </label>
+      <label class="btn btn-danger {{isNotSharedActive}}" for="shared-1">
+        <input type="radio" name="radiosShared" id="shared-1" value="0" {{isNotSharedChecked}} >
+        NO
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="radiosMethod">Method</label>
+    <div class="col-md-6 btn-group" data-toggle="buttons">
+      <label class="btn btn-default {{isHttpActive}} hideLogin" for="method-3" id="httpMethodLabel">
+        <input type="radio" name="radiosMethod" id="method-3" value="HTTP" {{isHttpChecked}}>
+        HTTP
+      </label>
+      <label class="btn btn-default {{isGetActive}} saveLogin" for="method-0" id="getMethodLabel">
+        <input type="radio" name="radiosMethod" id="method-0" value="GET" {{isGetChecked}} >
+        GET
+      </label>
+      <label class="btn btn-default {{isPostActive}} saveLogin" for="method-1" id="postMethodLabel">
+        <input type="radio" name="radiosMethod" id="method-1" value="POST" {{isPostChecked}} >
+        POST
+      </label>
+      <label class="btn btn-default {{isFtpActive}} hideLogin" for="method-2" id="ftpMethodLabel">
+        <input type="radio" name="radiosMethod" id="method-2" value="FTP" {{isFtpChecked}} >
+        FTP
+      </label>
+    </div>
+  </div>
+  <div class="loginInfo" style="display:none;">
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="inputLoginName">Login Name</label>
+      <div class="col-md-6">
+        <input id="inputLoginName" name="inputLoginName" type="text" placeholder="form login name" class="form-control input-md" value="{{loginName}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="inputPasswordName">Password Name</label>
+      <div class="col-md-6">
+        <input id="inputPasswordName" name="inputPasswordName" type="text" placeholder="form password name" class="form-control input-md" value="{{passwordName}}">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="inputImage">Image</label>
+    <div class="col-md-6">
+      <input type="file" class="form-control" id="inputImage" placeholder="Website Image" >
+    </div>
+  </div>
+  <div class="row" id="images"></div>
+</template>

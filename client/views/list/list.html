@@ -1,0 +1,19 @@
+<template name="listApp">
+  {{#each AppsList}}
+    <div class="col-xs-3 text-center item">
+      <a href="/add/{{_id}}" title="Add {{name}}" class="btn {{style}}">
+        {{#if image}}
+          <div class="text-center">
+            <img src="{{image}}" alt="{{name}}" class="img-rounded">
+            <p style="width:100%" class="text-center">{{name}}</p>
+          </div>
+        {{else}}
+          {{name}}
+        {{/if}}
+      </a>
+      <div class="clearfix"></div>
+      <a href="/add/{{_id}}" title="Add {{name}}" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+    </div>
+  {{/each}}
+  {{> createButton}}
+</template>

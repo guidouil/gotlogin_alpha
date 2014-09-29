@@ -1,0 +1,26 @@
+<template name="modifyApp">
+  <div id="list">
+    {{#each Links}}
+      <div class="col-xs-3 text-center item" data-id="{{_id}}">
+          <a class="btn {{app.style}}">
+            {{#if app.image}}
+              <div class="text-center">
+                <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
+                <p style="width:100%" class="text-center"><span class="glyphicon glyphicon-move"></span> {{app.name}}</p>
+              </div>
+            {{else}}
+              <span class="glyphicon glyphicon-move"></span> {{app.name}}
+            {{/if}}
+          </a>
+          <div class="clearfix"></div>
+          <div class="btn-group">
+            {{#if ownedLogin}}
+              <a href="/editlogin/{{login}}" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>
+              <a href="/sharelogin/{{login}}" class="btn btn-info"><span class="glyphicon glyphicon-share"></span></a>
+            {{/if}}
+            <button class="btn btn-warning removeAppUser"><span class="glyphicon glyphicon-trash"></span></button>
+          </div>
+      </div>
+    {{/each}}
+  </div>
+</template>

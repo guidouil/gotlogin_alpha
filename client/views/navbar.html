@@ -1,0 +1,36 @@
+<template name="navbar">
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">gotLog<strong>in</strong></a>
+
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+        <!-- <ul class="nav navbar-nav navbar-right">
+            <li class=""></li>
+            <li class="{{ activeIfTemplateIs 'listApp' }}"></li>
+            <li class="{{ activeIfTemplateIs 'modifyApp' }}"></li>
+            <li class="{{ activeIfTemplateIs 'myApp' }}"></li>
+        </ul> -->
+        <!-- <form role="search" class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+        </form> -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <a href="{{pathFor 'dash'}}" title="Dashboard" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'dash' }}"><span class="glyphicon glyphicon-dashboard"></span></a>
+        <a href="{{pathFor 'modifyApp'}}" title="Edit" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'modifyApp' }}"><span class="glyphicon glyphicon-cog"></span></a>
+        <a href="{{pathFor 'listApp'}}" title="Add" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'listApp' }}"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{{pathFor 'myApp'}}" title="My websites" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'myApp' }}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <ul class="nav navbar-nav navbar-right">
+            {{> loginButtons}}
+        </ul>
+    </div>
+</nav>
+</template>

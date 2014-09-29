@@ -1,0 +1,14 @@
+<template name="editApp">
+  <div class="well">
+
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Edit {{name}}</legend>
+        {{> appForm}}
+        <button class="btn btn-primary saveApp">Save</button>
+        <a href="{{pathFor 'modifyApp'}}" class="btn">Cancel</a>
+      </fieldset>
+    </form>
+
+  </div>
+</template>

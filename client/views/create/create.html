@@ -1,0 +1,12 @@
+<template name="createApp">
+  <div class="well">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Create a link to a website or webapp</legend>
+        {{> appForm}}
+        <button  class="btn btn-primary createApp">Create</button>
+        <a href="{{pathFor 'home'}}" class="btn">Cancel</a>
+      </fieldset>
+    </form>
+  </div>
+</template>

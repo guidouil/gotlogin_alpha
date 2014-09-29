@@ -1,0 +1,22 @@
+<template name="myApp">
+  {{#each Applications}}
+    <div class="col-xs-3 text-center item">
+        <a href="/edit/{{_id}}" class="btn {{style}}" title="Edit {{name}}">
+          {{#if image}}
+            <div class="text-center">
+              <img src="{{image}}" alt="{{name}}" class="img-rounded">
+              <p style="width:100%" class="text-center">{{name}}</p>
+            </div>
+          {{else}}
+            {{name}}
+          {{/if}}
+        </a>
+        <div class="clearfix"></div>
+        <div class="btn-group">
+          <a href="/edit/{{_id}}" class="btn btn-primary editApp" title="Edit {{name}}"><span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-warning removeApp" title="Delete {{name}}"><span class="glyphicon glyphicon-trash"></span></button>
+        </div>
+    </div>
+    {{/each}}
+    {{> createButton}}
+</template>
