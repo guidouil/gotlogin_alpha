@@ -1,11 +1,11 @@
 # gotLogin
 This all project started because of passwords being shared at the office.
 
-You can try here [gotlog.in](https://gotlog.in)
+You can try it on [gotlog.in](https://gotlog.in)
 
 -------------------------------------------------------------
 
-### To make it more secure you can install it inside your network.
+### Or you can install it on your system (linux or mac only).
 
 1. If not allready done, install [node](http://nodejs.org/) and [meteor](https://www.meteor.com/)
 2. Download the code from here with `git clone` or with the button on the right
