@@ -13,7 +13,7 @@ Template.shareLogin.events({
     if (validEmail) {
       Meteor.call('share_login', this._id, inputEmail , function (error, result) {
         if (result == inputEmail) {
-          Alerts.add('Successfully shared with '+inputEmail, 'success');
+          Alerts.add('Successfully shared with '+inputEmail, 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
         };
       });
     };

@@ -37,7 +37,7 @@ Template.editLogin.events({
         }
       });
     };
-    Alerts.add('Login updated', 'success');
+    Alerts.add('Login updated', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     Router.go('modifyApp');
   }
 });

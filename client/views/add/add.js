@@ -65,7 +65,7 @@ Template.addApp.events({
       login: loginId,
       order: linkOrder
     });
-    Alerts.add('Link to ' + this.name + ' sucessfully added', 'success');
+    Alerts.add('Link to ' + this.name + ' sucessfully added', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     Router.go('dash');
   }
 });

@@ -29,7 +29,7 @@ Template.editApp.events({
           }
         }
       );
-      Alerts.add('Button for ' + inputName + ' sucessfully updated', 'success');
+      Alerts.add('Button for ' + inputName + ' sucessfully updated', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     }
 
     Router.go('myApp');

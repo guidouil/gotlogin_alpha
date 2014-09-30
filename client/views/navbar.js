@@ -3,6 +3,13 @@ Template.navbar.helpers({
     var currentRoute = Router.current();
     return currentRoute &&
       template === currentRoute.lookupTemplate() ? 'active' : '';
+  },
+  isLogedIn: function() {
+    if (Meteor.userId()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 });
 Template.navbar.events({

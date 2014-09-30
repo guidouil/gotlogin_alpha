@@ -4,6 +4,7 @@ Template.layout.events({
     $('legend').removeClass("night");
     $('.well').removeClass("night");
     $('nav').removeClass("navbar-inverse");
+    $('.navbar-btn').removeClass("night");
     Session.set("theme", "day");
   },
   'click #night': function () {
@@ -11,6 +12,7 @@ Template.layout.events({
     $('legend').addClass("night");
     $('.well').addClass("night");
     $('nav').addClass("navbar-inverse");
+    $('.navbar-btn').addClass("night");
     Session.set("theme", "night");
   }
 });
@@ -23,6 +25,7 @@ Template.layout.rendered = function(){
     $('legend').removeClass("night");
     $('.well').removeClass("night");
     $('nav').removeClass("navbar-inverse");
+    $('.navbar-btn').removeClass("night");
     Session.set("theme", "day");
   }
   if( hour > 19 || hour < 7 ) {
@@ -30,6 +33,7 @@ Template.layout.rendered = function(){
     $('legend').addClass("night");
     $('.well').addClass("night");
     $('nav').addClass("navbar-inverse");
+    $('.navbar-btn').addClass("night");
     Session.set("theme", "night");
   }
 };

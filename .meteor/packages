@@ -16,5 +16,7 @@ jparker:crypto-aes
 email
 mrt:bootstrap-alerts
 accounts-facebook
+accounts-google
 accounts-twitter
+meteorhacks:kadira
 joshowens:accounts-entry
