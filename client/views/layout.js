@@ -5,6 +5,7 @@ Template.layout.events({
     $('.well').removeClass("night");
     $('nav').removeClass("navbar-inverse");
     $('.navbar-btn').removeClass("night");
+    $('.tutorial-btn').removeClass("night");
     Session.set("theme", "day");
   },
   'click #night': function () {
@@ -13,7 +14,14 @@ Template.layout.events({
     $('.well').addClass("night");
     $('nav').addClass("navbar-inverse");
     $('.navbar-btn').addClass("night");
+    $('.tutorial-btn').addClass("night");
     Session.set("theme", "night");
+  },
+  'click .lang-fr': function() {
+    TAPi18n.setLanguage('fr');
+  },
+  'click .lang-en': function() {
+    TAPi18n.setLanguage('en');
   }
 });
 
@@ -26,6 +34,7 @@ Template.layout.rendered = function(){
     $('.well').removeClass("night");
     $('nav').removeClass("navbar-inverse");
     $('.navbar-btn').removeClass("night");
+    $('.tutorial-btn').removeClass("night");
     Session.set("theme", "day");
   }
   if( hour > 19 || hour < 7 ) {
@@ -34,6 +43,7 @@ Template.layout.rendered = function(){
     $('.well').addClass("night");
     $('nav').addClass("navbar-inverse");
     $('.navbar-btn').addClass("night");
+    $('.tutorial-btn').addClass("night");
     Session.set("theme", "night");
   }
 };

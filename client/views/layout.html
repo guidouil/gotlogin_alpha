@@ -1,7 +1,5 @@
 <template name="layout">
-  <div class="container-fluid">
-    {{> navbar }}
-  </div>
+  {{> navbar }}
   <div class="container-fluid">
     <div class="row">
       {{> bootstrapAlerts}}
@@ -10,7 +8,7 @@
   </div>
   <div class="footer">
     <div class="container">
-      <p class="text-muted text-center">Theme: <a class="btn btn-xs btn-default" id="day">day</a> <a class="btn btn-xs btn-black" id="night">night</a> | <a href="https://github.com/guidouil/gotlogin" title="Fork me on GitHub" target="_blank">GitHub</a> | <a href="https://twitter.com/gotlogin" title="@gotlogin" target="_blank">Twitter</a> | Coded with <a href="http://meteor.com" title="MeteorJS" target="_blank">Meteor</a> and <a href="mailto:igotlogin@gmail.com"><span class="glyphicon glyphicon-heart"></span></a> in Caen, France.</p>
+      <p class="text-muted text-center">{{_ "theme"}} <a class="btn btn-xs btn-default" id="day">{{_ "day"}}</a> <a class="btn btn-xs btn-black" id="night">{{_ "night"}}</a> | <a class="lang-fr" title="Français">FR</a> {{_ "or"}} <a class="lang-en" title="English">EN</a> | <a href="https://github.com/guidouil/gotlogin" title="Fork me on GitHub" target="_blank">GitHub</a> | <a href="https://twitter.com/gotlogin" title="@gotlogin" target="_blank">Twitter</a> | {{_ "coded_with"}} <a href="http://meteor.com" title="MeteorJS" target="_blank">Meteor</a> {{_ "and"}} <a href="mailto:igotlogin@gmail.com" title="Love"><span class="glyphicon glyphicon-heart"></span></a> {{_ "caen"}}</p>
     </div>
   </div>
 </template>

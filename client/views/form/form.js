@@ -7,52 +7,55 @@ Template.appForm.events({
   },
   'blur #inputUrl': function (evt, tmpl) {
     var url = tmpl.find('#inputUrl').value;
-    Meteor.call('get_url', url, function (error, result) {
-      if (result) {
-        if (result.pageUrl) {
-          $('#inputUrl').val(result.pageUrl.toString());
-        };
-        if (result.pageTitle) {
-          $('#inputName').val(result.pageTitle.toString());
-        };
-        if (result.loginName) {
-          $('#inputLoginName').val(result.loginName.toString());
-        };
-        if (result.passwordName) {
-          $('#inputPasswordName').val(result.passwordName.toString());
-        };
-        if (result.images) {
-          $('#images').html("");
-          for (var i = 0; i < result.images.length; i++) {
-            $('#images').append('<div class="col-md-2"><label for="image-' + i + '"><div class="thumbnail"><img src="' + result.images[i] + '"><div class="caption"><p><input type="radio" name="image" value="' + result.images[i] + '" id="image-' + i + '"> Select</p></div></div></label></div>');
+    var urlRegExp =/^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
+    if (urlRegExp.test(url)) {
+      Meteor.call('get_url', url, function (error, result) {
+        if (result) {
+          if (result.pageUrl) {
+            $('#inputUrl').val(result.pageUrl.toString());
           };
-        };
-        if(result.formMethod) {
-          $('#httpMethodLabel').removeClass('active');
-          $('#getMethodLabel').removeClass('active');
-          $('#postMethodLabel').removeClass('active');
-          $('#ftpMethodLabel').removeClass('active');
-          $('.loginInfo').fadeOut("fast");
-          if(result.formMethod.toString() == 'POST' && result.passwordName) {
-            $('#postMethodLabel').addClass('active');
-            $('#method-1').attr('checked', 'checked');
-            $('.loginInfo').fadeIn("fast");
-          } else if(result.formMethod.toString() == 'GET' && result.passwordName) {
-            $('#getMethodLabel').addClass('active');
-            $('#method-0').attr('checked', 'checked');
-            $('.loginInfo').fadeIn("fast");
-          } else if(result.formMethod.toString() == 'FTP') {
-            $('#ftpMethodLabel').addClass('active');
-            $('#method-2').attr('checked', 'checked');
-          } else {
-            $('#httpMethodLabel').addClass('active');
-            $('#method-3').attr('checked', 'checked');
-          }
-        };
-      } else {
-        console.log(error);
-      }
-    });
+          if (result.pageTitle) {
+            $('#inputName').val(result.pageTitle.toString());
+          };
+          if (result.loginName) {
+            $('#inputLoginName').val(result.loginName.toString());
+          };
+          if (result.passwordName) {
+            $('#inputPasswordName').val(result.passwordName.toString());
+          };
+          if (result.images) {
+            $('#images').html("");
+            for (var i = 0; i < result.images.length; i++) {
+              $('#images').append('<div class="col-md-2"><label for="image-' + i + '"><div class="thumbnail"><img src="' + result.images[i] + '"><div class="caption"><p><input type="radio" name="image" value="' + result.images[i] + '" id="image-' + i + '"> Select</p></div></div></label></div>');
+            };
+          };
+          if(result.formMethod) {
+            $('#httpMethodLabel').removeClass('active');
+            $('#getMethodLabel').removeClass('active');
+            $('#postMethodLabel').removeClass('active');
+            $('#ftpMethodLabel').removeClass('active');
+            $('.loginInfo').fadeOut("fast");
+            if(result.formMethod.toString() == 'POST' && result.passwordName) {
+              $('#postMethodLabel').addClass('active');
+              $('#method-1').attr('checked', 'checked');
+              $('.loginInfo').fadeIn("fast");
+            } else if(result.formMethod.toString() == 'GET' && result.passwordName) {
+              $('#getMethodLabel').addClass('active');
+              $('#method-0').attr('checked', 'checked');
+              $('.loginInfo').fadeIn("fast");
+            } else if(result.formMethod.toString() == 'FTP') {
+              $('#ftpMethodLabel').addClass('active');
+              $('#method-2').attr('checked', 'checked');
+            } else {
+              $('#httpMethodLabel').addClass('active');
+              $('#method-3').attr('checked', 'checked');
+            }
+          };
+        } else {
+          console.log(error);
+        }
+      });
+    };
   }
 });
 

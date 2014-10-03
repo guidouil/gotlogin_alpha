@@ -1,8 +1,10 @@
-/* CSS declarations go here */
 body {
-  padding-top: 70px;
   font-family: 'Open Sans', sans-serif;
   background-color: #eee;
+}
+
+a {
+  cursor: pointer;
 }
 
 .night {
@@ -18,11 +20,12 @@ body {
   background-color : #428BCA;
   box-shadow       : 0 0 0 #428BCA;
 }
-.item {margin-bottom: 10px; text-align: center;}
-.item img {max-width: 64px; max-height: 64px;}
-.item p {margin: 0;}
+.item {margin-bottom: 10px; text-align: center; height: 111px;}
+.item img, .item-icon {max-width: 72px; max-height: 72px; vertical-align: middle;}
+.icon-container {width: 72px; height: 72px; line-height: 72px; margin: 0 auto;}
+.create-conatainer {height: 111px;line-height: 111px;}
 
-#images img {max-width: 64px; max-height: 64px;}
+#images img {max-width: 72px; max-height: 72px;}
 
 .footer {
   width: 100%;
@@ -37,4 +40,12 @@ body {
 }
 .bootbox-body {
   color: #333;
+}
+.modal-body, .modal-footer {
+  color: #333;
+}
+.positioned {
+  max-width: 350px;
+  left: 10px!important;
+  margin-left: 0!important;
 }

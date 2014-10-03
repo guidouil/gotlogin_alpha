@@ -2,22 +2,22 @@
   <div class="well">
     <form class="form-horizontal">
       <fieldset>
-        <legend>Edit {{name}} credentials</legend>
+        <legend>{{_ "edit_password_title"}} {{app.name}}</legend>
 
           <div class="form-group">
-            <label class="col-md-3 control-label" for="inputLogin">Login</label>
+            <label class="col-md-3 control-label" for="inputLogin">{{_ "login_email"}}</label>
             <div class="col-md-6">
-              <input type="text" class="form-control" id="inputLogin" placeholder="username or email" value="{{login}}">
+              <input type="text" class="form-control" id="inputLogin" placeholder="{{_ "login_email"}} {{_ "for"}} {{app.name}}" value="{{login}}">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label" for="inputPassword">Password</label>
+            <label class="col-md-3 control-label" for="inputPassword">{{_ "password"}}</label>
             <div class="col-md-6">
-              <input type="password" class="form-control" id="inputPassword" placeholder="leave blank to keep same password and update login only" value="">
+              <input type="password" class="form-control" id="inputPassword" placeholder="{{_ "password_placeholder_edit"}}" value="">
             </div>
           </div>
-        <button  class="btn btn-primary saveAppLogin">Save</button>
-        <a href="{{pathFor 'modifyApp'}}" class="btn">Cancel</a>
+        <button  class="btn btn-primary saveAppLogin">{{_ "save"}}</button>
+        <a href="{{pathFor 'modifyApp'}}" class="btn">{{_ "cancel"}}</a>
       </fieldset>
     </form>
     {{> loginUsers}}

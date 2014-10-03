@@ -42,6 +42,12 @@ Template.editLogin.events({
   }
 });
 
+Template.editLogin.helpers({
+  app: function() {
+    return Applications.findOne({_id: this.app});
+  }
+});
+
 Template.editLogin.rendered = function(){
   if (Session.get('theme') != '') {
     if (Session.equals('theme', 'day')) {

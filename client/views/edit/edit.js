@@ -29,6 +29,19 @@ Template.editApp.events({
           }
         }
       );
+      if (inputImage == "") {
+        var file = tmpl.find('#inputImage').files[0];
+        var appId = this._id;
+        if (file) {
+          var reader = new FileReader();
+          reader.onload = function(evt) {
+            Applications.update({_id: appId},{$set: {image: evt.target.result}});
+          };
+          reader.readAsDataURL(file);
+        } else {
+          Applications.update({_id: appId},{$set: {image: '/default-icon.png'}});
+        }
+      };
       Alerts.add('Button for ' + inputName + ' sucessfully updated', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     }
 

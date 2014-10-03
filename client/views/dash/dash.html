@@ -1,29 +1,23 @@
 <template name="dash">
   <div id="list">
     {{#each Links}}
-    	<div class="col-xs-3 text-center item" data-id="{{_id}}">
+    	<div class="col-xs-2 text-center item" data-id="{{_id}}">
       {{#if isFtp app.method}}
-        <a href="ftp://{{#if appLogin.login}}{{appLogin.login}}:{{decryptPassword appLogin.password appLogin._id}}@{{/if}}{{ftpDomain app.url}}" title="{{app.name}}" class="btn {{app.style}}" target="_blank">
-          {{#if app.image}}
-            <div class="text-center">
-              <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
-              <p style="width:100%" class="text-center">{{app.name}}</p>
-            </div>
-          {{else}}
-            {{app.name}}
-          {{/if}}
+        <a href="ftp://{{#if appLogin.login}}{{appLogin.login}}:{{decryptPassword appLogin.password appLogin._id}}@{{/if}}{{ftpDomain app.url}}" title="{{app.name}}" target="_blank">
+          <div class="icon-container">
+            <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
+          </div>
+          <div class="clearfix"></div>
+          <caption class="btn {{app.style}} btn-xs">{{app.name}}</caption>
         </a>
       {{else}}
         {{#if isHttp app.method}}
-          <a href="{{httpProtocol app.url}}://{{#if appLogin}}{{appLogin.login}}:{{decryptPassword appLogin.password appLogin._id}}@{{/if}}{{httpUrl app.url}}" title="{{name}}" class="btn {{app.style}}" target="_blank">
-            {{#if app.image}}
-              <div class="text-center">
-                <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
-                <p style="width:100%" class="text-center">{{app.name}}</p>
-              </div>
-            {{else}}
-              {{app.name}}
-            {{/if}}
+          <a href="{{httpProtocol app.url}}://{{#if appLogin}}{{appLogin.login}}:{{decryptPassword appLogin.password appLogin._id}}@{{/if}}{{httpUrl app.url}}" title="{{name}}" target="_blank">
+            <div class="icon-container">
+              <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
+            </div>
+            <div class="clearfix"></div>
+            <caption class="btn {{app.style}} btn-xs">{{app.name}}</caption>
           </a>
         {{else}}
           <form action="{{app.url}}" method="{{app.method}}" target="_blank">
@@ -33,21 +27,16 @@
             {{#if appLogin}}
             <input type="hidden" name="{{app.passwordName}}" value="{{decryptPassword appLogin.password appLogin._id}}">
             {{/if}}
-            <button class="btn {{app.style}}" type="submit">
-              {{#if app.image}}
-                <div class="text-center">
-                  <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
-                  <p style="width:100%" class="text-center">{{app.name}}</p>
-                </div>
-              {{else}}
-                {{app.name}}
-              {{/if}}
-            </button>
+            <div class="icon-container">
+              <input type="image" src="{{app.image}}" alt="{{app.name}}" class="img-rounded item-icon">
+            </div>
+            <div class="clearfix"></div>
+            <input type="submit" name="{{app.name}}" value="{{app.name}}" class="btn {{app.style}} btn-xs">
           </form>
         {{/if}}
       {{/if}}
       </div>
     {{/each}}
-    {{sortable}}
+    {{> createButton}}
   </div>
 </template>

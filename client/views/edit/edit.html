@@ -3,10 +3,10 @@
 
     <form class="form-horizontal">
       <fieldset>
-        <legend>Edit {{name}}</legend>
+        <legend>{{_ "edit_icon_title"}} {{name}}</legend>
         {{> appForm}}
-        <button class="btn btn-primary saveApp">Save</button>
-        <a href="{{pathFor 'modifyApp'}}" class="btn">Cancel</a>
+        <button class="btn btn-primary saveApp">{{_ "save"}}</button>
+        <a href="{{pathFor 'modifyApp'}}" class="btn">{{_ "cancel"}}</a>
       </fieldset>
     </form>
 

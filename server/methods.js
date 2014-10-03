@@ -99,14 +99,15 @@ Meteor.methods({
           };
         };
       };
-      var subject = sharer + " wants to share " + app.name.toString() + " with you";
+      var subject = "gotLogin | " + sharer + " wants to share " + app.name.toString() + " with you";
       var url = Meteor.absoluteUrl()+"token/"+token;
       var text = 'Hi,<br>' +
                 sharer + ' wants to share a login and password with you.<br>' +
                 'To get the password for <b>' + app.name.toString() + '</b> please click on the following link :<br>' +
                 '<a href="' + url +'">' + url + '</a><br><br>' +
                 'Happy logins,<br>' +
-                'The gotLogers';
+                'The gotLogers<br>' +
+                '@<a href="https://gotlog.in">gotLog<b>in</b></a>';
     }
     Email.send({
       to: to,

@@ -2,21 +2,21 @@
   <div class="well">
     <form class="form-horizontal">
       <fieldset>
-        <legend>Add {{name}}</legend>
+        <legend>{{_ "add"}} {{name}}</legend>
         <div class="form-group">
-          <label class="col-md-3 control-label" for="inputLogin">Login</label>
+          <label class="col-md-3 control-label" for="inputLogin">{{_ "login_email"}}</label>
           <div class="col-md-6">
-            <input type="text" class="form-control" id="inputLogin" placeholder="username or email" value="{{login}}">
+            <input type="text" class="form-control" id="inputLogin" placeholder="{{_ "login_email"}} {{_ "for"}} {{name}}" value="{{login}}">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label" for="inputPassword">Password</label>
+          <label class="col-md-3 control-label" for="inputPassword">{{_ "password"}}</label>
           <div class="col-md-6">
-            <input type="password" class="form-control" id="inputPassword" placeholder="if you don't want to remember any more time" value="{{password}}">
+            <input type="password" class="form-control" id="inputPassword" placeholder="{{_ "password_placeholder_add"}}" value="{{password}}">
           </div>
         </div>
-        <button  class="btn btn-primary addApp">Add</button>
-        <a href="{{pathFor 'home'}}" class="btn">Cancel</a>
+        <button  class="btn btn-primary addApp">{{_ "add"}}</button>
+        <a href="{{pathFor 'home'}}" class="btn">{{_ "cancel"}}</a>
       </fieldset>
     </form>
   </div>

@@ -1,18 +1,18 @@
 <template name="appForm">
   <div class="form-group">
-    <label class="col-md-3 control-label" for="inputUrl">Url</label>
+    <label class="col-md-3 control-label" for="inputUrl">{{_ "url"}}</label>
     <div class="col-md-6">
       <input type="url" class="form-control" id="inputUrl" placeholder="Website url address or form action" value="{{url}}" required="required">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-md-3 control-label" for="inputName">Name</label>
+    <label class="col-md-3 control-label" for="inputName">{{_ "name"}}</label>
     <div class="col-md-6">
       <input type="text" class="form-control" id="inputName" placeholder="Website name" value="{{name}}" required="required">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-md-3 control-label" for="radiosStyle">Style</label>
+    <label class="col-md-3 control-label" for="radiosStyle">{{_ "style"}}</label>
     <div class="col-md-6 btn-group" data-toggle="buttons">
       <label class="btn btn-default {{defaultStyleActive}}" for="style-0" id="defaultStyleLabel">
         <input type="radio" name="radiosStyle" id="style-0" value="btn-default" {{defaultStyleChecked}}>
@@ -42,21 +42,21 @@
   </div>
 
   <div class="form-group">
-    <label class="col-md-3 control-label" for="radiosShared">Shared</label>
+    <label class="col-md-3 control-label" for="radiosShared">{{_ "public"}}</label>
     <div class="col-md-6 btn-group" data-toggle="buttons">
       <label class="btn btn-success {{isSharedActive}}" for="shared-0" id="isSharedLabel">
         <input type="radio" name="radiosShared" id="shared-0" value="1" {{isSharedChecked}}>
-        YES
+        {{_ "YES"}}
       </label>
       <label class="btn btn-danger {{isNotSharedActive}}" for="shared-1">
         <input type="radio" name="radiosShared" id="shared-1" value="0" {{isNotSharedChecked}} >
-        NO
+        {{_ "NO"}}
       </label>
     </div>
   </div>
 
   <div class="form-group">
-    <label class="col-md-3 control-label" for="radiosMethod">Method</label>
+    <label class="col-md-3 control-label" for="radiosMethod">{{_ "method"}}</label>
     <div class="col-md-6 btn-group" data-toggle="buttons">
       <label class="btn btn-default {{isHttpActive}} hideLogin" for="method-3" id="httpMethodLabel">
         <input type="radio" name="radiosMethod" id="method-3" value="HTTP" {{isHttpChecked}}>
@@ -78,20 +78,20 @@
   </div>
   <div class="loginInfo" style="display:none;">
     <div class="form-group">
-      <label class="col-md-3 control-label" for="inputLoginName">Login Name</label>
+      <label class="col-md-3 control-label" for="inputLoginName">{{_ "login_name"}}</label>
       <div class="col-md-6">
         <input id="inputLoginName" name="inputLoginName" type="text" placeholder="form login name" class="form-control input-md" value="{{loginName}}">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-3 control-label" for="inputPasswordName">Password Name</label>
+      <label class="col-md-3 control-label" for="inputPasswordName">{{_ "password_name"}}</label>
       <div class="col-md-6">
         <input id="inputPasswordName" name="inputPasswordName" type="text" placeholder="form password name" class="form-control input-md" value="{{passwordName}}">
       </div>
     </div>
   </div>
   <div class="form-group">
-    <label class="col-md-3 control-label" for="inputImage">Image</label>
+    <label class="col-md-3 control-label" for="inputImage">{{_ "icon"}}</label>
     <div class="col-md-6">
       <input type="file" class="form-control" id="inputImage" placeholder="Website Image" >
     </div>

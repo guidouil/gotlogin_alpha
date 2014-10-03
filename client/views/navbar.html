@@ -1,5 +1,5 @@
 <template name="navbar">
-	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+	<nav role="navigation" class="navbar navbar-default">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -24,13 +24,17 @@
             </div>
         </form> -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
-        <a href="{{pathFor 'dash'}}" title="Dashboard" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'dash' }}"><span class="glyphicon glyphicon-dashboard"></span></a>
-        <a href="{{pathFor 'modifyApp'}}" title="Edit" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'modifyApp' }}"><span class="glyphicon glyphicon-cog"></span></a>
-        <a href="{{pathFor 'listApp'}}" title="Add" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'listApp' }}"><span class="glyphicon glyphicon-plus"></span></a>
-        <a href="{{pathFor 'myApp'}}" title="My websites" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'myApp' }}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a href="{{pathFor 'dash'}}" title="Dashboard" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'dash' }}" id="dashboardBtn"><span class="glyphicon glyphicon-home"></span></a>
+        <a href="{{pathFor 'modifyApp'}}" title="Config" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'modifyApp' }}" id="editBtn"><span class="glyphicon glyphicon-cog"></span></a>
+        <a href="{{pathFor 'listApp'}}" title="Add" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'listApp' }}" id="addBtn"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{{pathFor 'myApp'}}" title="Edit" type="button" class="btn btn-default navbar-btn {{ activeIfTemplateIs 'myApp' }}" id="myBtn"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a title="gotLogin Tutorial" type="button" class="btn btn-default tutorial-btn"><span class="glyphicon glyphicon-question-sign"></span></a>
         <ul class="nav navbar-nav navbar-right">
             {{> loginButtons}}
         </ul>
     </div>
 </nav>
+{{#if tutorialEnabled}}
+    {{> tutorial options}}
+{{/if}}
 </template>
