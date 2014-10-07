@@ -19,9 +19,11 @@ Template.layout.events({
   },
   'click .lang-fr': function() {
     TAPi18n.setLanguage('fr');
+    Session.set('language', 'fr');
   },
   'click .lang-en': function() {
     TAPi18n.setLanguage('en');
+    Session.set('language', 'en');
   }
 });
 

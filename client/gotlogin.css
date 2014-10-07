@@ -20,10 +20,10 @@ a {
   background-color : #428BCA;
   box-shadow       : 0 0 0 #428BCA;
 }
-.item {margin-bottom: 10px; text-align: center; height: 111px;}
+.item {margin-bottom: 10px; text-align: center; height: 116px;}
 .item img, .item-icon {max-width: 72px; max-height: 72px; vertical-align: middle;}
 .icon-container {width: 72px; height: 72px; line-height: 72px; margin: 0 auto;}
-.create-conatainer {height: 111px;line-height: 111px;}
+.create-container {height: 116px;line-height: 116px;}
 
 #images img {max-width: 72px; max-height: 72px;}
 

@@ -2,15 +2,15 @@
   <div class="well">
     <form class="form-horizontal">
       <fieldset>
-        <legend>Share {{app.name}} login and password with</legend>
+        <legend>{{_ "share_title" app.name}}</legend>
         <div class="form-group">
-          <label class="col-md-3 control-label" for="inputEmail">Email</label>
+          <label class="col-md-3 control-label" for="inputEmail">{{_ "email"}}</label>
           <div class="col-md-6">
             <input type="email" class="form-control" id="inputEmail" placeholder="your contact email address" value="">
           </div>
         </div>
-        <button  class="btn btn-primary shareLogin">Share</button>
-        <a href="{{pathFor 'modifyApp'}}" class="btn">Cancel</a>
+        <button  class="btn btn-primary shareLogin"><span class="glyphicon glyphicon-share"></span> {{_ "share"}}</button>
+        <a href="{{pathFor 'modifyApp'}}" class="btn">{{_ "cancel"}}</a>
       </fieldset>
     </form>
     {{> loginUsers}}

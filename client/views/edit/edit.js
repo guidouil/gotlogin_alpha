@@ -42,9 +42,8 @@ Template.editApp.events({
           Applications.update({_id: appId},{$set: {image: '/default-icon.png'}});
         }
       };
-      Alerts.add('Button for ' + inputName + ' sucessfully updated', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
+      Alerts.add( TAPi18n.__("msg_update_success", inputName), 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     }
-
     Router.go('myApp');
   }
 });

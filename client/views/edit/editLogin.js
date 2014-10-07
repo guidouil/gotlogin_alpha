@@ -37,7 +37,7 @@ Template.editLogin.events({
         }
       });
     };
-    Alerts.add('Login updated', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
+    Alerts.add(TAPi18n.__("msg_update_login_success"), 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     Router.go('modifyApp');
   }
 });

@@ -1,6 +1,6 @@
 <template name="token">
 {{getLogin}}
 <div class="alert alert-warning hidden">
-    <strong>Please</strong> <a href="/sign-in" title="login">login</a> or <a href="/sign-up" title="">create an account</a> and reload <a href="{{url this.token}}" title="{{url this.token}}">this url</a> to use this sharing password token.
+    <strong>{{_ "please"}}</strong> <a href="/sign-in" title="login">{{_ "login"}}</a> {{_ "or"}} <a href="/sign-up" title="">{{_ "create_account"}}</a> {{_ "token_reload"}} <a href="{{url this.token}}">{{url this.token}}</a> {{_ "use_token"}}
 </div>
 </template>

@@ -37,7 +37,7 @@ Template.createApp.events({
           Applications.update({_id: appId},{$set: {image: '/default-icon.png'}});
         }
       };
-      Alerts.add('Button for ' + inputName + ' sucessfully created, you should now add it to your dashboard', 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
+      Alerts.add( TAPi18n.__("msg_create_success", inputName), 'success', {fadeIn: 1000, fadeOut: 1000, autoHide: 3000});
     };
     Router.go('listApp');
   }

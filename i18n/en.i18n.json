@@ -56,5 +56,20 @@
   "tuto_s3_l3" : "Your private icons",
   "tuto_s3_l4" : "To add them to your dashboard.",
   "tuto_s4_title" : "The Edit Button",
-  "tuto_s4_l1" : "Here you will find the icons you created to edit or delete them."
+  "tuto_s4_l1" : "Here you will find the icons you created to edit or delete them.",
+  "please" : "Please",
+  "token_reload" : "and reload this url",
+  "use_token": "to get the shared password.",
+  "msg_add_success" : "Icon to %s successfully added",
+  "msg_create_success" : "Icon for %s successfully created, you should now add it to your home",
+  "msg_update_success" : "Icon for %s successfully updated",
+  "msg_update_login_success" : "Login and maybe password successfully updated",
+  "share_title" : "Share %s login and password",
+  "email" : "Email address",
+  "share" : "Share",
+  "sharing_with" : "Allready sharing with:",
+  "status" : "Status",
+  "unshare" : "Unshare",
+  "pending" : "Pending",
+  "sharing" : "Sharing"
 }

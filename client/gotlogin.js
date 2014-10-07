@@ -3,26 +3,33 @@ Meteor.subscribe('Logins');
 Meteor.subscribe('Links');
 Meteor.subscribe('Keys');
 
+getUserLanguage = function () {
+  var language = window.navigator.userLanguage || window.navigator.language;
+  if (language.length > 2) {
+    language = language.substring(0,2).toLowerCase();
+  };
+  Session.set('language', language);
+  //return language;
+};
+
+
 Meteor.startup(function () {
+  getUserLanguage();
+
+  accountsUIBootstrap3.setLanguage(Session.get('language'));
+
   AccountsEntry.config({
     homeRoute: '/',                 // mandatory - path to redirect to after sign-out
     dashboardRoute: '/dash',      // mandatory - path to redirect to after successful sign-in
     wrapLinks: true,
     passwordSignupFields: 'USERNAME_AND_EMAIL',
-    language: 'en',
+    language: Session.get('language'),
     showOtherLoginServices: true//,     // Set to false to hide oauth login buttons on the signin/signup pages. Useful if you are using
   });
-});
 
-getUserLanguage = function () {
-  var language = window.navigator.userLanguage || window.navigator.language;
-  return language;
-};
-
-Meteor.startup(function () {
   Session.set("showLoadingIndicator", true);
 
-  TAPi18n.setLanguage(getUserLanguage())
+  TAPi18n.setLanguage(Session.get('language'))
     .done(function () {
       Session.set("showLoadingIndicator", false);
     })

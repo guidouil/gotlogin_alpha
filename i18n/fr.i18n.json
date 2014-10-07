@@ -56,5 +56,20 @@
   "tuto_s3_l3" : "Vos icônes privées",
   "tuto_s3_l4" : "Vous pourrez les ajouter à votre Home",
   "tuto_s4_title" : "Le bouton Edit",
-  "tuto_s4_l1" : "Ici vous trouverez les icônes que vous avez créer pour les éditer ou les supprimer."
+  "tuto_s4_l1" : "Ici vous trouverez les icônes que vous avez créer pour les éditer ou les supprimer.",
+  "please" : "Veuillez vous",
+  "token_reload" : "et recharger cette url",
+  "use_token": "pour obtenir le mot de passe partagé.",
+  "msg_add_success" : "Icône vers %s ajoutée avec succès",
+  "msg_create_success" : "Icône pour %s crée avec succès, vous pouvez maintent l'ajouter à votre home",
+  "msg_update_success" : "Icône pour %s mise à jour avec succès",
+  "msg_update_login_success" : "Login et peut-être mot de passe mis à jour",
+  "share_title" : "Partager le mot de passe de %s",
+  "email" : "Adresse email",
+  "share" : "Partager",
+  "sharing_with" : "Vous partager déjà avec :",
+  "status" : "Statut",
+  "unshare" : "Retirer",
+  "pending" : "En attente",
+  "sharing" : "Partagé"
 }

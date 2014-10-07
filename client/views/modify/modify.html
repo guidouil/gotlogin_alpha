@@ -5,13 +5,14 @@
         <div class="icon-container">
           <img src="{{app.image}}" alt="{{app.name}}" class="img-rounded">
         </div>
+        <caption class="btn {{app.style}} btn-xs">{{app.name}}</caption>
         <div class="clearfix"></div>
         <div class="btn-group">
           {{#if ownedLogin}}
             <a href="/editlogin/{{login}}" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-edit"></span></a>
             <a href="/sharelogin/{{login}}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-share"></span></a>
           {{/if}}
-          <p class="btn {{app.style}} btn-xs"><span class="glyphicon glyphicon-move"></span> {{app.name}}</p>
+          <p class="btn btn-default btn-xs"><span class="glyphicon glyphicon-move"></span></p>
           <button class="btn btn-warning btn-xs removeAppUser"><span class="glyphicon glyphicon-trash"></span></button>
         </div>
       </div>
