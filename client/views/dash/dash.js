@@ -1,8 +1,7 @@
-Template.dash.Links = function () {
-  return Links.find({},{sort: {order:1}});
-};
-
 Template.dash.helpers({
+  Links: function() {
+    return Links.find({},{sort: {order:1}});
+  },
   appLogin: function() {
     return Logins.findOne({_id: this.login});
   },

@@ -1,7 +1,3 @@
-Template.modifyApp.Links = function () {
-  return Links.find({},{sort: {order:1}});
-};
-
 Template.modifyApp.helpers({
   app: function () {
     return Applications.findOne({_id: this.app});
@@ -12,6 +8,9 @@ Template.modifyApp.helpers({
       return true;
     };
     return false;
+  },
+  Links: function () {
+    return Links.find({},{sort: {order:1}});
   }
 });
 

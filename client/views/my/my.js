@@ -1,6 +1,8 @@
-Template.myApp.Applications = function () {
-  return Applications.find({owner: Meteor.userId()});
-};
+Template.myApp.helpers({
+  Applications: function () {
+    return Applications.find({owner: Meteor.userId()});
+  }
+});
 
 Template.myApp.events({
   'click .removeApp': function (evt, tmpl) {
