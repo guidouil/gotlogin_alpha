@@ -9,7 +9,6 @@ accounts-password
 mizzao:bootboxjs
 http
 meteorhacks:npm
-mrt:iron-router-progress
 jparker:crypto-aes
 email
 mrt:bootstrap-alerts
@@ -21,8 +20,5 @@ joshowens:accounts-entry
 mizzao:tutorials
 tap:i18n
 coffeescript
-
-
-npm-container
 ian:accounts-ui-bootstrap-3
-
+npm-container
