@@ -1,5 +1,4 @@
 # gotLogin
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/guidouil/gotlogin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This all project started because of passwords being shared at the office.
 
 You can try it on [gotlog.in](https://gotlog.in)
@@ -13,3 +12,5 @@ You can try it on [gotlog.in](https://gotlog.in)
 3. In command line go to the gotlogin project folder
 4. Still in command line run `meteor`
 5. Now open your browser on [localhost:3000](http://localhost:3000)
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/guidouil/gotlogin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
